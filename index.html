@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="name">Praveen kumar</div>
+                <ul id="sidemenu">
+                    <li> <a href "#"> Home</a></li>
+                    <li> <a href "#"> About</a></li>
+                    <li> <a href "#"> Contact me</a></li>
+                    </li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-align-justify" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> web developer</p>
+                <h1> Hi, I'am <span>Praveen kumar</span><br> Dosani</h1>
+            </div>
+        </div>
+
+    </div>
+    <!----------------ABOUT---------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="logo1.jpeg" alt="praveen">
+
+                </div>
+                <div class="about-col-2">
+                    <h4 class="sub-title"> About Me</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora ad voluptas autem! Et
+                        illo a nam repudiandae ipsam minus in deserunt officia accusamus at, fugit explicabo laborum
+                        iste commodi!S</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')"> Experience</p>
+                        <p class="tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> HTML5+CSS3</li>
+                            <li> Javascrip</li>
+                            <li> React.js</li>
+                            <li> Node.js</li>
+                            <li> SQL </li>
+                            <li> mangobd </li>
+                            <li> java + DSA </li>
+                            <li> Git&Github</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias inventore quas
+                            expedita ab velit, eum in quia rerum quibusdam pariatur, doloremque aspernatur commodi vero,
+                            atque numquam assumenda? Cumque exercitationem culpa voluptates.
+                            completed internship</p> <br>
+                            <a href="INTERNSHIP EXPERIENCELETTER.pdf" download class="btn btn2">INRERNSHIP EXPERIENCELETTER<i
+                                class="fa-solid fa-download fa-xl"></i></i></a>
+        
+
+
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+
+                            <li>Hii</li>
+                            <li>Javascrip</li>
+                            <li>React.js</li>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-----------------Contact me ------------------------------>
+    <div class="container" id="contact">
+        <div class="row">
+            <div class="contact-left">
+                <div class="sub-title">Contact Me </div>
+                <p> <i class="fa-solid fa-paper-plane fa-2xl"></i>praveendosani@gmail.com</p>
+                <p> <i class="fa-solid fa-phone-volume fa-xl"></i>8688384248</p>
+                <div class="social-icons ">
+                    <a href="# "><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
+
+                    <a href="# "><i class="fa-brands fa-square-instagram fa-xl"></i></a>
+
+
+
+                </div>
+
+                <a href="INTERNSHIP EXPERIENCELETTER.pdf" download class="btn btn2">Download CV<i
+                        class="fa-solid fa-download fa-xl"></i></i></a>
+
+
+            </div>
+            <div class="contact-right">
+
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required="required">
+                    <input type="email" name="email" placeholder="Your Email" required="required">
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type=" submit" class="btn btn2"> Submit</button>
+
+                </form>
+            </div>
+
+           
+        </div>
+        
+        <div class="end" >
+            THANK YOU 
+
+        </div>
+        
+    </div>
+    <!-- <script src="script.js"> </script> -->
+    <script>
+        var sidemeu =document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right="0 ";
+        }
+        function closemenu(){
+            sidemeu.style.right="-200px";
+        }
+        
+
+  
+
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+
+        //     </script>
+
+
+</body>
+
+</html>
